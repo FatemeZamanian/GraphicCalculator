@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>420</width>
+    <height>429</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Calculator</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(0, 0, 0);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton_clear">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>220</y>
+      <width>141</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+	font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+	font: 9pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border-radius:8px;
+border-width:2px;
+	border-color: rgb(208, 69, 104);
+border-style:outset;
+}
+QPushButton:hover{
+	
+	
+	
+	
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 0, 127)
+}
+
+
+</string>
+    </property>
+    <property name="text">
+     <string>Clear</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>9</y>
+      <width>401</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Yu Gothic UI Semibold</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(170, 85, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="text">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Yu Gothic UI Semibold'; font-size:12pt; font-weight:600; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_del">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>220</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+	font: 9pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border-radius:8px;
+border-width:2px;
+	border-color: rgb(208, 69, 104);
+border-style:outset;
+}
+QPushButton:hover{
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 0, 127)
+}
+
+
+</string>
+    </property>
+    <property name="text">
+     <string>Delete</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>376</y>
+      <width>401</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="pushButton_dot">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	
+	font: 75 13pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border-radius:8px;
+border-width:2px;
+border-color: rgb(244, 255, 34);
+border-style:outset;
+}
+QPushButton:hover{
+	
+	
+	
+	
+	color: rgb(0, 0, 0);
+	background-color: rgb(244, 255, 34);
+}
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>.</string>
+       </property>
+       <property name="shortcut">
+        <string>.</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_zero">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border-radius:8px;
+border-width:2px;
+border-color: rgb(0, 197, 0);
+border-style:outset;
+}
+QPushButton:hover{
+	
+	color: rgb(0, 0, 0);
+	
+	background-color: rgb(0, 197, 0);
+}
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="shortcut">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_answer">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border-radius:8px;
+border-width:2px;
+border-color:rgb(255, 2, 2);
+border-style:outset;
+}
+QPushButton:hover{
+	
+	
+	
+	
+	color: rgb(255, 255, 255);
+	background-color:rgb(255, 2, 2);
+}
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>=</string>
+       </property>
+       <property name="shortcut">
+        <string>=</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>250</y>
+      <width>401</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton_pluse">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border-radius:8px;
+border-width:2px;
+border-color: rgb(244, 255, 34);
+border-style:outset;
+}
+QPushButton:hover{
+	
+	
+	
+	
+	color: rgb(0, 0, 0);
+	background-color: rgb(244, 255, 34);
+}
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>+</string>
+       </property>
+       <property name="shortcut">
+        <string>+</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_devide">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	font: 75 13pt &quot;MS Shell Dlg 2&quot;;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border-radius:8px;
+border-width:2px;
+border-color: rgb(244, 255, 34);
+border-style:outset;
+}
+QPushButton:hover{
+	
+	
+	
+	
+	color: rgb(0, 0, 0);
+	background-color: rgb(244, 255, 34);
+}
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>/</string>
+       </property>
+       <property name="shortcut">
+        <string>/</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_minus">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border-radius:8px;
+border-width:2px;
+border-color: rgb(244, 255, 34);
+border-style:outset;
+}
+QPushButton:hover{
+	
+	color: rgb(0, 0, 0);
+	background-color: rgb(244, 255, 34);
+}
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>-</string>
+       </property>
+       <property name="shortcut">
+        <string>-</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_multiple">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border-radius:8px;
+border-width:2px;
+border-color: rgb(244, 255, 34);
+border-style:outset;
+}
+QPushButton:hover{
+	
+	
+	color: rgb(0, 0, 0);
+	background-color: rgb(244, 255, 34);
+}
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>*</string>
+       </property>
+       <property name="shortcut">
+        <string>*</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_power">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border-radius:8px;
+border-width:2px;
+border-color: rgb(244, 255, 34);
+border-style:outset;
+}
+QPushButton:hover{
+	
+	
+	
+	
+	color: rgb(0, 0, 0);
+	background-color: rgb(244, 255, 34);
+}
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>^</string>
+       </property>
+       <property name="shortcut">
+        <string>^</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>280</y>
+      <width>81</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton_sin">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	font: 75 13pt &quot;MS Shell Dlg 2&quot;;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border-radius:8px;
+border-width:2px;
+border-color: rgb(0, 217, 217);
+border-style:outset;
+}
+QPushButton:hover{
+	
+	color: rgb(0, 0, 0);
+	
+	background-color:rgb(0, 217, 217);
+}
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>Sin</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_cos">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	font: 75 13pt &quot;MS Shell Dlg 2&quot;;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border-radius:8px;
+border-width:2px;
+border-color: rgb(0, 217, 217);
+border-style:outset;
+}
+QPushButton:hover{
+	
+	color: rgb(0, 0, 0);
+	
+	background-color:rgb(0, 217, 217);
+}
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>Cos</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_tan">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	font: 75 13pt &quot;MS Shell Dlg 2&quot;;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border-radius:8px;
+border-width:2px;
+border-color: rgb(0, 217, 217);
+border-style:outset;
+}
+QPushButton:hover{
+	
+	color: rgb(0, 0, 0);
+	
+	background-color:rgb(0, 217, 217);
+}
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>Tan</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>280</y>
+      <width>311</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButton">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border-radius:8px;
+border-width:2px;
+border-color: rgb(0, 197, 0);
+border-style:outset;
+}
+QPushButton:hover{
+	
+	color: rgb(0, 0, 0);
+	
+	background-color: rgb(0, 197, 0);
+}
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+       <property name="shortcut">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border-radius:8px;
+border-width:2px;
+border-color: rgb(0, 197, 0);
+border-style:outset;
+}
+QPushButton:hover{
+	
+	color: rgb(0, 0, 0);
+	
+	background-color: rgb(0, 197, 0);
+}
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>2</string>
+       </property>
+       <property name="shortcut">
+        <string>2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border-radius:8px;
+border-width:2px;
+border-color: rgb(0, 197, 0);
+border-style:outset;
+}
+QPushButton:hover{
+	
+	color: rgb(0, 0, 0);
+	
+	background-color: rgb(0, 197, 0);
+}
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>3</string>
+       </property>
+       <property name="shortcut">
+        <string>3</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border-radius:8px;
+border-width:2px;
+border-color: rgb(0, 197, 0);
+border-style:outset;
+}
+QPushButton:hover{
+	
+	color: rgb(0, 0, 0);
+	
+	background-color: rgb(0, 197, 0);
+}
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>4</string>
+       </property>
+       <property name="shortcut">
+        <string>4</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border-radius:8px;
+border-width:2px;
+border-color: rgb(0, 197, 0);
+border-style:outset;
+}
+QPushButton:hover{
+	
+	color: rgb(0, 0, 0);
+	
+	background-color: rgb(0, 197, 0);
+}
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>5</string>
+       </property>
+       <property name="shortcut">
+        <string>5, 5</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border-radius:8px;
+border-width:2px;
+border-color: rgb(0, 197, 0);
+border-style:outset;
+}
+QPushButton:hover{
+	
+	color: rgb(0, 0, 0);
+	
+	background-color: rgb(0, 197, 0);
+}
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>6</string>
+       </property>
+       <property name="shortcut">
+        <string>6</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="pushButton_7">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border-radius:8px;
+border-width:2px;
+border-color: rgb(0, 197, 0);
+border-style:outset;
+}
+QPushButton:hover{
+	
+	color: rgb(0, 0, 0);
+	
+	background-color: rgb(0, 197, 0);
+}
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>7</string>
+       </property>
+       <property name="shortcut">
+        <string>7</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="pushButton_8">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border-radius:8px;
+border-width:2px;
+border-color: rgb(0, 197, 0);
+border-style:outset;
+}
+QPushButton:hover{
+	
+	color: rgb(0, 0, 0);
+	
+	background-color: rgb(0, 197, 0);
+}
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>8</string>
+       </property>
+       <property name="shortcut">
+        <string>8</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="pushButton_9">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border-radius:8px;
+border-width:2px;
+border-color: rgb(0, 197, 0);
+border-style:outset;
+}
+QPushButton:hover{
+	
+	color: rgb(0, 0, 0);
+	
+	background-color: rgb(0, 197, 0);
+}
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>9</string>
+       </property>
+       <property name="shortcut">
+        <string>9</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>420</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
